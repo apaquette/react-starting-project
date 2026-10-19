@@ -1,5 +1,5 @@
 import CoreConcept from "./CoreConcept";
-import Section from "../section";
+import Section from "../Section";
 
 export default function CoreConcepts({core_concepts}){
     return (
