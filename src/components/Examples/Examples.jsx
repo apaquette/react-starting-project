@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TabButton from "../TabButton";
+import Section from "../section";
 
 function Examples({examples}){
     let [ selectedTopic, setSelectedTopic ] = useState();
@@ -24,15 +25,14 @@ function Examples({examples}){
             )
     }
     return (
-        <section id="examples">
-            <h2>Examples</h2>
+        <Section title="Examples" id="examples">
             <menu>
             {Object.entries(examples).map(([key, section]) => (
                 <TabButton isSelected={selectedTopic === key} onClick={() => selectHandler(key)} key={key}>{section.title}</TabButton>
             ))}
             </menu>
             {tabContent}
-        </section>
+        </Section>
     );
 }
 
