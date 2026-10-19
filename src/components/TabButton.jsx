@@ -3,6 +3,6 @@ export default function TabButton({children, onClick, isSelected}){
         <li>
             <button className={isSelected && 'active'} onClick={onClick}>{children}</button>
         </li>
-    )
+    );
 
 }
