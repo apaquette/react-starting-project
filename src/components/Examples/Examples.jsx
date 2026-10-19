@@ -2,7 +2,7 @@ import { useState } from "react";
 import TabButton from "../TabButton";
 import Section from "../section";
 
-function Examples({examples}){
+export default function Examples({examples}){
     let [ selectedTopic, setSelectedTopic ] = useState();
 
     function selectHandler(clickedButton){
@@ -35,5 +35,3 @@ function Examples({examples}){
         </Section>
     );
 }
-
-export default Examples

@@ -1,7 +1,7 @@
 import CoreConcept from "./CoreConcept";
 import Section from "../section";
 
-function CoreConcepts({core_concepts}){
+export default function CoreConcepts({core_concepts}){
     return (
         <Section title="Core Concepts" id="core-concepts">
             <ul>
@@ -12,5 +12,3 @@ function CoreConcepts({core_concepts}){
         </Section>
     )
 }
-
-export default CoreConcepts;

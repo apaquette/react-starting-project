@@ -4,7 +4,7 @@ import CoreConcepts from "./components/CoreConcepts/CoreConcepts.jsx";
 import Examples from "./components/Examples/Examples.jsx";
 
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
@@ -15,5 +15,3 @@ function App() {
     </>
   );
 }
-
-export default App;
