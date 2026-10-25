@@ -4,14 +4,10 @@ import TabButton from "../TabButton";
 import Section from "../Section";
 
 export default function Examples({examples}){
-    let [ selectedTopic, setSelectedTopic ] = useState();
+    let [ selectedTopic, setSelectedTopic ] = useState(Object.keys(examples)[0]);
 
     function selectHandler(clickedButton){
-    setSelectedTopic(clickedButton);
-    }
-
-    if (!selectedTopic){
-        selectedTopic = Object.keys(examples)[0]; // default to first
+        setSelectedTopic(clickedButton);
     }
 
     let buttons = (
