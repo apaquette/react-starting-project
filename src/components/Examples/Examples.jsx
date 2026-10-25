@@ -9,6 +9,11 @@ export default function Examples({examples}){
     function selectHandler(clickedButton){
     setSelectedTopic(clickedButton);
     }
+
+    if (!selectedTopic){
+        selectedTopic = Object.keys(examples)[0]; // default to first
+    }
+
     let buttons = (
         Object.entries(examples).map(([key, content]) => (
                     <TabButton 
@@ -18,21 +23,17 @@ export default function Examples({examples}){
                     </TabButton>
                 ))
     );
-
-    let content = <p>Please select a topic</p>;
-    if (selectedTopic){
-    content = (
-            <div id="tab-content">
-                <h3>{examples[selectedTopic].title}</h3>
-                <p>{examples[selectedTopic].description}</p>
-                <pre>
-                <code>
-                    {examples[selectedTopic].code}
-                </code>
-                </pre>
-            </div>
-            )
-    }
+    let content = (
+        <div id="tab-content">
+            <h3>{examples[selectedTopic].title}</h3>
+            <p>{examples[selectedTopic].description}</p>
+            <pre>
+            <code>
+                {examples[selectedTopic].code}
+            </code>
+            </pre>
+        </div>
+    )
         
     return (
         <>
